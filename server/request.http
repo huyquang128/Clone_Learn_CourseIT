@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "quanghuy1",
+    "password": "quanghuy1"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "quanghuy",
+    "password": "quanghuy"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQxMDJmMGMyNjM1MDFmM2MwMWE1ZmEiLCJpYXQiOjE2ODE5ODU4NjR9.H1-evdF898lH-2OH4FrcMDm42DFieW-Syzd4ONevAh8
+
+{
+    "title": "Python",
+    "description": "Khoá học cơ bản python",
+    "url": "pythonbasic.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQxMDJmMGMyNjM1MDFmM2MwMWE1ZmEiLCJpYXQiOjE2ODE5ODU4NjR9.H1-evdF898lH-2OH4FrcMDm42DFieW-Syzd4ONevAh8
+
+###
+PUT http://localhost:5000/api/posts/644111b63c657f8bb6fb717c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQxMDJmMGMyNjM1MDFmM2MwMWE1ZmEiLCJpYXQiOjE2ODE5ODU4NjR9.H1-evdF898lH-2OH4FrcMDm42DFieW-Syzd4ONevAh8
+
+{
+    "title":"ReactJS Nâng cao",
+    "description": "Khoá học nâng cao ReactJS",
+    "url": "",
+    "status": ""
+}
+
+###
+DELETE http://localhost:5000/api/posts/644111b63c657f8bb6fb717c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQxMDJmMGMyNjM1MDFmM2MwMWE1ZmEiLCJpYXQiOjE2ODE5ODU4NjR9.H1-evdF898lH-2OH4FrcMDm42DFieW-Syzd4ONevAh8
